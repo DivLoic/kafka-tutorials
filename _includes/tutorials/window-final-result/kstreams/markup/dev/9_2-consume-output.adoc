@@ -1,0 +1,9 @@
+At the end, you should be able to see the output count for the key 101 and the key 102.
++++++
+<pre class="snippet"><code class="bash">#2019-09-19 01:15:57 [...] Count = 6 for Key = 101, at window [06:01:20-06:01:30] Thu 19 Sep 2019 (Europe/Paris))
+#2019-09-19 01:15:57 [...] Count = 1 for Key = 102, at window [06:01:20-06:01:30] Thu 19 Sep 2019 (Europe/Paris))
+</code></pre>
++++++
+
+Hours are printed in your default system time zone. So it was between ... and ... for me when the sensor 102
+experienced 2 pressure alerts. To start investigate on what happened, I need the time zone of that sensor.
