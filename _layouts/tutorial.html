@@ -63,6 +63,11 @@
             Basic Kafka
           </option>
           {% endif %}
+          {% if site.data.tutorials[page.static_data].status.scala == 'enabled' %}
+          <option value="{{ site.data.tutorials[page.static_data].slug | relative_url }}/scala.html" {% if page.stack == 'clients' %} selected {% endif %}>
+          Kafka Clients
+          </option>
+          {% endif %}
         </select>
       </div>
       <div class="cflt-tabs">
@@ -80,6 +85,36 @@
           {% if site.data.tutorials[page.static_data].status.kafka == 'enabled' %}
           <a class="button {% if page.stack == 'kafka' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/kafka.html">
             Basic Kafka
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.scala == 'enabled' %}
+          <a class="button {% if page.stack == 'scala' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/scala.html">
+            Scala
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.python == 'enabled' %}
+          <a class="button {% if page.stack == 'python' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/python.html">
+            Python
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.nodejs == 'enabled' %}
+          <a class="button {% if page.stack == 'nodejs' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/nodejs.html">
+            Node.js
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.go == 'enabled' %}
+          <a class="button {% if page.stack == 'go' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/go.html">
+            Go
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.swift == 'enabled' %}
+          <a class="button {% if page.stack == 'swift' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/swift.html">
+            Swift
+          </a>
+          {% endif %}
+          {% if site.data.tutorials[page.static_data].status.c == 'enabled' %}
+          <a class="button {% if page.stack == 'c' %} is-selected {% endif %}" href="{{ site.data.tutorials[page.static_data].slug | relative_url }}/c.html">
+            C
           </a>
           {% endif %}
         </div>

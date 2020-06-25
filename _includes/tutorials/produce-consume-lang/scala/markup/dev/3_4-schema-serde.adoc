@@ -1,0 +1,18 @@
+The instances of case class in our code will be serialize in an https://avro.apache.org/[Avro] format.
+To do so, we will need the appropriate serializers/deserializers.
+We add the following function to easily create a `Serializer[T]` where `T` in the type of the key or the value
+we'd like to serialise.
+
++++++
+<pre class="snippet"><code class="scala">{%
+    include_raw tutorials/produce-consume-lang/scala/code/src/main/scala/io/confluent/developer/schema/TypedSerde.scala
+%}</code></pre>
++++++
+
+If the Specific method (where code is generated from schemas) for creating record is more common,
+in scala you might want to use the reflection method (where schemas is generated from code)
+to preserve your case class flexibility. That's why we include https://github.com/sksamuel/avro4s[avro4s],
+a scala library generation of Apache Avro objects. It will create records or instances in two steps:
+
+- Serialization:    Raw bytes <- Generic Records <- Case Class Instances
+- Deserialization:  Raw bytes -> Generic Records -> Case Class Instances

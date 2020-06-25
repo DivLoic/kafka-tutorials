@@ -9,3 +9,4 @@
     ksql: <KSQL-ENABLED>
     kstreams: <KSTREAMS-ENABLED>
     kafka: disabled
+    clients: disabled

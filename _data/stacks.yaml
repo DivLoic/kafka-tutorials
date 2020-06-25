@@ -6,3 +6,22 @@ kstreams:
 
 kafka:
   pretty: Kafka
+
+# use for the produce-consume-lang tutorial only
+scala:
+  pretty: Scala Lang
+
+swift:
+  pretty: Apple Swift
+
+nodejs:
+  pretty: Node.js
+
+go:
+  pretty: Go
+
+c:
+  pretty: C
+
+python:
+  pretty: Python
